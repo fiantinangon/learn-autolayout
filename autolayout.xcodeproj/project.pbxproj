@@ -14,6 +14,8 @@
 		6B07A8141C5F165C009F7DDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B07A8121C5F165C009F7DDA /* LaunchScreen.storyboard */; };
 		6B07A81F1C5F165D009F7DDA /* autolayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B07A81E1C5F165D009F7DDA /* autolayoutTests.swift */; };
 		6B07A82A1C5F165D009F7DDA /* autolayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B07A8291C5F165D009F7DDA /* autolayoutUITests.swift */; };
+		6B7812861C61DDAD00226399 /* CustomSubHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7812851C61DDAD00226399 /* CustomSubHeader.xib */; };
+		6B7812881C61DDDB00226399 /* CustomSubHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7812871C61DDDB00226399 /* CustomSubHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		6B07A8251C5F165D009F7DDA /* autolayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = autolayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B07A8291C5F165D009F7DDA /* autolayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autolayoutUITests.swift; sourceTree = "<group>"; };
 		6B07A82B1C5F165D009F7DDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B7812851C61DDAD00226399 /* CustomSubHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSubHeader.xib; sourceTree = "<group>"; };
+		6B7812871C61DDDB00226399 /* CustomSubHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSubHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				6B07A8101C5F165C009F7DDA /* Assets.xcassets */,
 				6B07A8121C5F165C009F7DDA /* LaunchScreen.storyboard */,
 				6B07A8151C5F165C009F7DDA /* Info.plist */,
+				6B7812851C61DDAD00226399 /* CustomSubHeader.xib */,
+				6B7812871C61DDDB00226399 /* CustomSubHeader.swift */,
 			);
 			path = autolayout;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			files = (
 				6B07A8141C5F165C009F7DDA /* LaunchScreen.storyboard in Resources */,
 				6B07A8111C5F165C009F7DDA /* Assets.xcassets in Resources */,
+				6B7812861C61DDAD00226399 /* CustomSubHeader.xib in Resources */,
 				6B07A80F1C5F165C009F7DDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +265,7 @@
 			files = (
 				6B07A80C1C5F165C009F7DDA /* ViewController.swift in Sources */,
 				6B07A80A1C5F165C009F7DDA /* AppDelegate.swift in Sources */,
+				6B7812881C61DDDB00226399 /* CustomSubHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +406,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = autolayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = reebonz.autolayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = autolayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = reebonz.autolayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,6 +492,7 @@
 				6B07A8301C5F165D009F7DDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B07A8311C5F165D009F7DDA /* Build configuration list for PBXNativeTarget "autolayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +501,7 @@
 				6B07A8331C5F165D009F7DDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B07A8341C5F165D009F7DDA /* Build configuration list for PBXNativeTarget "autolayoutUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +510,7 @@
 				6B07A8361C5F165D009F7DDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
