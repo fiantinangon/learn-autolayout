@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CustomHeaderDelegate {
+    func setData(data:NSString)
+}
+
 @IBDesignable class CustomSubHeader: UIView {
     
     
@@ -15,7 +19,9 @@ import UIKit
     @IBOutlet weak var mSwitch: UISwitch!
     
     var view:UIView!
-
+    var delegate:CustomHeaderDelegate? = nil
+    
+    //MARK: INIT CUSTOM VIEW
     
     override init(frame: CGRect)
     {
@@ -35,7 +41,11 @@ import UIKit
         view = loadViewFromNib()
         view.frame = bounds
         view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-//        self.transla / tesAutoresizingMaskIntoConstraints = false
+        
+        //SET SWITCH ACTION
+        mSwitch.addTarget(self, action: "switchChanged:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        
         addSubview(view)
     }
     
@@ -47,6 +57,25 @@ import UIKit
         let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         
         return view
+    }
+    
+    //MARK:DELEGATE
+    
+    func switchChanged(mySwitch: UISwitch) {
+        let value = mySwitch.on
+        
+        if value == true {
+            if (delegate != nil) {
+                let data:NSString = "ACTIVATE"
+                delegate!.setData(data)
+            }
+        }else {
+            if (delegate != nil) {
+                let data:NSString = "DEACTIVATE"
+                delegate!.setData(data)
+            }
+        }
+        
     }
     
     

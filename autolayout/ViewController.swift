@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,CustomHeaderDelegate {
     @IBOutlet weak var mScrollView: UIScrollView!
     @IBOutlet weak var mButton1: UIButton!
     @IBOutlet weak var mLabel: UILabel!
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     let string2 = "$720"
     
     
-    // MARK: Action
+    // MARK: ACTION
 
     @IBAction func changeText(sender: AnyObject) {
         if cHeightRecomendedContainer.constant == 35.0 {
@@ -76,6 +76,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
+        mViewSubHeader.delegate = self
         hideLoading()
 
     }
@@ -85,8 +86,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK:LOADING
+    
     func hideLoading() {
-        //loading container
+        
         let screenHeight = CGRectGetHeight(view.bounds)
         let loadingPosition = screenHeight/2.0 + mViewLoading.bounds.height/2
         
@@ -95,11 +98,12 @@ class ViewController: UIViewController {
     }
     
     func showLoading() {
-        //loading container
-        
+
         cLoadingContainerCenterY.constant = 0
         
     }
+    
+    //MARK:UI
     
     func updateUI() {
         let priceString:NSString = string1 + " " + string2
@@ -113,6 +117,16 @@ class ViewController: UIViewController {
         mLabel.attributedText = atributedPriceString
         
         
+    }
+    
+    //MARK:DELEGATE METHOD
+    
+    func setData(data: NSString) {
+        mLabel.text = data as String
+        
+        let alert = UIAlertController(title: "CUSTOM VIEW DELEGATE", message: "SWITCH " + (data as String), preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     
