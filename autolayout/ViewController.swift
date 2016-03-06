@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+
+
+//MARK:
+
 class ViewController: UIViewController,CustomHeaderDelegate {
     @IBOutlet weak var mScrollView: UIScrollView!
     @IBOutlet weak var mButton1: UIButton!
@@ -19,6 +24,7 @@ class ViewController: UIViewController,CustomHeaderDelegate {
     @IBOutlet weak var cLoadingCenterX: NSLayoutConstraint!
     @IBOutlet weak var cLoadingContainerCenterY: NSLayoutConstraint!
     @IBOutlet weak var mViewSubHeader: CustomSubHeader!
+    @IBOutlet weak var tes: UITextView!
     
     // MARK: INIT VARIABLE
     
@@ -131,6 +137,6 @@ class ViewController: UIViewController,CustomHeaderDelegate {
     
     
 
-
 }
+
 
